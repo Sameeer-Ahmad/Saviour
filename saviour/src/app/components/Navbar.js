@@ -109,8 +109,13 @@ export default function Navbar() {
                     rightIcon={<ChevronDownIcon />}
                     ml={-4}
                     mr={-4}
+                    _focus={{ bg: "black" }}
+                    _active={{ bg: "black" }}
+                    
                   >
-                    Coming Soon
+                   
+                      Coming Soon
+                      
                   </MenuButton>
                   <MenuList bg={"black"} color={"white"}>
                     <MenuItem bg={"black"} color={"white"}>
@@ -124,7 +129,6 @@ export default function Navbar() {
                     </MenuItem>
                   </MenuList>
                 </Menu>
-              
               </HStack>
             </HStack>
           </Flex>
