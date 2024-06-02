@@ -4,7 +4,7 @@ Saviour is a decentralized Initial DEX Offering (IDO) platform designed to empow
 
 ## Deployed Link
 
-You can access the live version of the Saviour project [here](https://saviour.example.com).
+You can access the live version of the Saviour project [here](https://savior-8g6f475e3-sameer-ahmads-projects-2dfaa1cf.vercel.app/).
 
 ## Tech Stack
 
