@@ -2,13 +2,13 @@
 import { Box, Flex, Grid, IconButton, Image, Text } from "@chakra-ui/react";
 import React from "react";
 import { FaTwitter } from "react-icons/fa";
-import { FaTelegram } from "react-icons/fa6";
-import { TiMail } from "react-icons/ti";
+import { FaTelegram } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
 export default function Footer() {
   return (
     <Box
       bgGradient={"linear(to-t, rgba(3, 4, 5, 1), rgba(18, 1, 1, 1)) "}
-      h={"428px"}
+      h={"400px"}
       align={"center"}
     >
       <Image
@@ -49,16 +49,16 @@ export default function Footer() {
       <Flex
         width={"83%"}
         mt={4}
-        fontSize={"12px"}
+        fontSize={"24px"}
         justify={"center"}
         align={"center"}
         color={"white"}
         flexWrap={"wrap"}
-        gap={8}
+        gap={2}
       >
-        <IconButton icon={<FaTwitter />} color={"red"} bg={"none"} />
+        <IconButton icon={<FaTwitter />}   color={"red"} bg={"none"} />
         <IconButton icon={<FaTelegram />} color={"red"} bg={"none"} />
-        <IconButton icon={<TiMail />} color={"red"} bg={"none"} />
+        <IconButton icon={<MdEmail />} color={"red"} bg={"none"} />
       </Flex>
     </Box>
   );
