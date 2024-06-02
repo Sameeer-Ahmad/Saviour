@@ -16,7 +16,9 @@ import {
   Text,
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon, ChevronDownIcon } from "@chakra-ui/icons";
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+AOS.init();
 const Links = ["Home", "IDO", "Tokenomics", "Roadmap"];
 export default function Navbar() {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -24,6 +26,8 @@ export default function Navbar() {
   return (
     <>
       <Box
+      data-aos="zoom-in"
+      data-aos-anchor-placement="top"
         px={8}
         pt={8}
         backgroundImage={
@@ -35,6 +39,8 @@ export default function Navbar() {
         bgPos={["center"]}
       >
         <Flex
+        data-aos="zoom-in"
+        data-aos-anchor-placement="top"
           h={16}
           alignItems={"center"}
           justifyContent={"space-between"}
@@ -54,7 +60,9 @@ export default function Navbar() {
             mb={[2, 1]}
           />
 
-          <Flex alignItems={"center"} justifyContent={"center"}>
+          <Flex alignItems={"center"} justifyContent={"center"} data-aos="zoom-in"
+          data-aos-anchor-placement="top">
+
             <Image
               src="https://s3-alpha-sig.figma.com/img/79e0/db14/6de61e6b7e512045a7cc5fab1681c6dc?Expires=1717977600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=myczd~GQsAb6milWNlczm~ovDCoFYtBtokVxcWQ2lMW1Q2wZ8OcFgeETzLYKzWzeCly5WR1E~fVyhUA8rDvf0n4zgLE7bGpxSohq1s1A4KJo6tYf0baF~wWNfCPXsI-rJBuI1CEVSuK9CPPPusZrsxZbjs8OqF32EIbD5fiWBewnSsihCpc6AK3rBbfgUTp6k~TdAyjM0icncVdwoQokJIMguM~~vE~PzzHMD2GaE116oqbko293C6i9boY-q5s6M8VhdJ8TLYDx-uZ4asIZsiIimOYN81MMzbAtGzlUq7abGwN80kQSBCo7lsCKP150lUiUigXSMrN85aanxdOlSQ__"
               w={["45px", "50px", "70px", "108px"]}
@@ -68,6 +76,7 @@ export default function Navbar() {
               fontSize={["12px", "16px", "20px", "24px"]}
               fontFamily={"zcool"}
               _hover={{ cursor: "pointer" }}
+              
             >
               Saviour
             </Text>
@@ -174,6 +183,8 @@ export default function Navbar() {
           top={["10%", "15%", "20%", "30%"]}
           mt={5}
           borderRadius={"20px"}
+          data-aos="zoom-in"
+          data-aos-anchor-placement="top"
         >
           Where Blockchain Heroes Thrive, Rescuing Dreams, Elevating Fortunes.
         </Text>

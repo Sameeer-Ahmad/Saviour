@@ -12,6 +12,7 @@ function RoadMap() {
         bgSize="cover"
         bgPos="center"
         opacity="40%"
+        
       >
         <Text
         pos={"relative"}
