@@ -7,18 +7,18 @@ import RoadMap from "@/pages/RoadMap";
 import QusAns from "@/pages/f&q";
 import Tokenomic from "@/pages/Tokenomic";
 import IDO from "@/pages/IDO";
-
+import "./globals.css"
 export default function Home() {
   return (
     <main>
       <Box bg={"black"}>
         <Navbar />
         <Intro />
-        <IDO/>
-        <Tokenomic/>
-        <RoadMap/>
-        <QusAns/>
-        <Footer/>
+        <IDO />
+        <Tokenomic />
+        <RoadMap />
+        <QusAns />
+        <Footer />
       </Box>
     </main>
   );

@@ -14,19 +14,19 @@ import { FaCopy } from "react-icons/fa";
 import React from "react";
 import { useState, useEffect } from "react";
 export default function IDO() {
-    const [time, setTime] = useState({ minutes: 0, seconds: 0 });
-      useEffect(() => {
-        const timer = setInterval(() => {
-          const newSeconds = time.seconds === 59 ? 0 : time.seconds + 1;
-          const newMinutes = newSeconds === 0 ? time.minutes + 1 : time.minutes;
-          setTime({ minutes: newMinutes, seconds: newSeconds });
-        }, 1000);
-    
-        return () => clearInterval(timer);
-      }, [time]);
+  const [time, setTime] = useState({ minutes: 0, seconds: 0 });
+  useEffect(() => {
+    const timer = setInterval(() => {
+      const newSeconds = time.seconds === 59 ? 0 : time.seconds + 1;
+      const newMinutes = newSeconds === 0 ? time.minutes + 1 : time.minutes;
+      setTime({ minutes: newMinutes, seconds: newSeconds });
+    }, 1000);
+
+    return () => clearInterval(timer);
+  }, [time]);
   return (
     <Box
-      mt={"1rem"}
+      mt={"2rem"}
       width={"100%"}
       display="flex"
       flexDirection="column"
@@ -73,6 +73,7 @@ export default function IDO() {
             wealth and achieve success.
           </Text>
           <Box
+          data-aos="fade-up"
             display={"flex"}
             flexDir={"column"}
             justifyContent={"space-between"}
@@ -139,6 +140,7 @@ export default function IDO() {
           >
             Connect Wallet
           </Button>
+
           <Text
             textAlign="center"
             mb="1rem"
@@ -170,10 +172,10 @@ export default function IDO() {
               </Box>
 
               <Button
-                bg="rgba(237, 1, 55, 1)"
                 fontFamily={"zcool"}
                 color="white"
-                _hover={{ bg: "red.600" }}
+                bgGradient="linear(to-l, #F05733,#ED0137)"
+                _hover={{ bgGradient: "linear(to-l, #ED0137,#F05733)" }}
                 borderRadius={"20px"}
                 fontSize={["12px", "16px"]}
                 ml={10}
@@ -191,30 +193,52 @@ export default function IDO() {
         </VStack>
 
         <VStack
-      spacing="1rem"
-      p="1rem"
-      borderColor="red.500"
-      borderRadius="10px"
-      flex="2"
-      justify={"space-between"}
-      alignItems="center"
-      height={["379px", "738px"]}
-      border={"1.5px solid rgba(239, 73, 15, 1)"}
-      position="relative"
-    >
-       <Text
-       bg={"black"}
-       border={"1.5px solid red.500"}
-        position="absolute"
-        top="-3%"
-        left="50%"
-        transform="translateX(-50%)"
-        color="white"
-        fontFamily={"shojumaru"}
-        fontSize={["16px", "24px"]}
-      >
-        {`${time.minutes.toString().padStart(2, "0")}:${time.seconds.toString().padStart(2, "0")}`}
-      </Text>
+         data-aos="fade-up"
+          spacing="1rem"
+          p="1rem"
+          borderColor="red.500"
+          borderRadius="10px"
+          flex="2"
+          justify={"space-between"}
+          alignItems="center"
+          height={["379px", "738px"]}
+          border={"1.5px solid rgba(239, 73, 15, 1)"}
+          position="relative"
+        >
+          <Flex
+            bg={"black"}
+            border={"1.5px solid red.500"}
+            position="absolute"
+            top="-4%"
+            left="50%"
+            transform="translateX(-50%)"
+            color="white"
+            fontFamily={"shojumaru"}
+            fontSize={["16px", "24px"]}
+            p="0.2rem"
+            borderRadius="md"
+          >
+            <Box
+              p="0.2rem 0.5rem"
+              display="inline-flex"
+              alignItems="center"
+              justifyContent="center"
+              borderRadius="md"
+              border={"1.5px solid red.500"}
+            >
+              {time.minutes.toString().padStart(2, "0")}
+            </Box>
+            <Text mx="0.2rem">:</Text>
+            <Box
+              p="0.2rem 0.5rem"
+              display="inline-flex"
+              alignItems="center"
+              justifyContent="center"
+              borderRadius="md"
+            >
+              {time.seconds.toString().padStart(2, "0")}
+            </Box>
+          </Flex>
           <Heading
             as="h2"
             fontSize={["22px", "48px"]}
@@ -253,25 +277,28 @@ export default function IDO() {
             Raised = $34,56,56,764/$40,00,00,000
           </Text>
           <Input
-            width={["232px","467px"]}
+            width={["232px", "467px"]}
             placeholder="Enter the amount (BNB)"
             bg="black"
             color="white"
-           borderRadius={"20px"}
+            borderRadius={"20px"}
+            _hover={{ borderColor: "red.500" }}
           />
           <Input
-            width={["232px","467px"]}
+            width={["232px", "467px"]}
             placeholder="Minimum Quantity to Buy"
             bg="black"
             color="white"
             borderRadius={"20px"}
+            _hover={{ borderColor: "red.500" }}
           />
           <Input
-           width={["232px","467px"]}
+            width={["232px", "467px"]}
             placeholder="Maximum Quantity of Tokens"
             bg="black"
             color="white"
             borderRadius={"20px"}
+            _hover={{ borderColor: "red.500" }}
           />
           <HStack spacing="1rem">
             <Button

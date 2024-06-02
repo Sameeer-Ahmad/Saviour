@@ -11,38 +11,32 @@ import {
   Text,
 } from "@chakra-ui/react";
 import React from "react";
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-AOS.init();
-import 'animate.css';
+
 export default function QusAns() {
   return (
     <Flex
       direction={{ base: "column", md: "row" }}
       alignItems={{ base: "center", md: "flex-start" }}
       justifyContent="center"
-      p={5} data-aos="zoom-in-up"
+      p={5}
     >
-      
-      <Box data-aos="zoom-in-up"
+      <Box
         display={{ base: "none", md: "block" }}
         mr={{ base: 0, md: 5 }}
         mb={16}
       >
-        <Image data-aos="zoom-in-up"
-        className="animate__backInUp"
+        <Image
           src="https://s3-alpha-sig.figma.com/img/7624/956b/bb5893d955ab92e34ab86102a42d6d23?Expires=1717977600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=b1~NO03ErsYsNkWmXnSA4~DC7Miz~9BKRyLhfzbi4ncI2EtBpBikP6Ab9oWmJVCnbuvL5M5KQsrgtlkmEBero7xZoJOf-Dsq9HdEoOFfY0rtiFaC11Gc8600aJ2ZvcdEpmBl8cgjjqe6TVxO0IoTRFQx~yiKw~39A0RKm0N8Wba4ea5hDFCHkW7BV16Y~VhWxYbmVNwdN9RDfRhcVhTLovmGIoF6f5EQsHvNQzYFMkeStp4P2jypS7Sp1oHkTSrbEsH-NPnAiEJmfZf-Otbo3k0SXA~O5loOObJ6PqmF9VjlpIIdyk1ABF42YExaEu5QDj~1qeCtmXC0XClPMX2WQg__"
           w="450px"
           h="450px"
         />
       </Box>
 
-      {/* Main content section */}
       <Box
         w={{ base: "100%", md: "500px" }}
         textAlign={{ base: "center", md: "left" }}
       >
-        {/* FAQ title for mobile and tablet view */}
+        
         <Text
           fontSize="32px"
           fontWeight="bold"
@@ -64,7 +58,6 @@ export default function QusAns() {
           textAlign={{ base: "center", md: "center" }}
           mt={[0, 0, 8]}
           fontFamily={"shojumaru"}
-          className="animate__backInUp"
         >
           FAQ
         </Text>
@@ -75,7 +68,7 @@ export default function QusAns() {
           mb={{ base: 4, md: 0 }}
           justifyContent="center"
         >
-          <Image className="animate__backInUp"
+          <Image
             src="https://s3-alpha-sig.figma.com/img/7624/956b/bb5893d955ab92e34ab86102a42d6d23?Expires=1717977600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=b1~NO03ErsYsNkWmXnSA4~DC7Miz~9BKRyLhfzbi4ncI2EtBpBikP6Ab9oWmJVCnbuvL5M5KQsrgtlkmEBero7xZoJOf-Dsq9HdEoOFfY0rtiFaC11Gc8600aJ2ZvcdEpmBl8cgjjqe6TVxO0IoTRFQx~yiKw~39A0RKm0N8Wba4ea5hDFCHkW7BV16Y~VhWxYbmVNwdN9RDfRhcVhTLovmGIoF6f5EQsHvNQzYFMkeStp4P2jypS7Sp1oHkTSrbEsH-NPnAiEJmfZf-Otbo3k0SXA~O5loOObJ6PqmF9VjlpIIdyk1ABF42YExaEu5QDj~1qeCtmXC0XClPMX2WQg__"
             w={["300px", "400px"]}
             h={["300px", "400px"]}
@@ -83,12 +76,12 @@ export default function QusAns() {
         </Box>
 
         {/* FAQ content */}
-        <Accordion allowToggle align={"center"} className="animate__backInUp">
-          <AccordionItem mt={[0, 0, 12]} border={"none "} className="animate__backInUp">
+        <Accordion allowToggle align={"center"}>
+          <AccordionItem mt={[0, 0, 12]} border={"none "}>
             <h2>
               <AccordionButton
                 border={"1px solid rgba(237, 1, 55, 1) "}
-                width={["350px", "450px"]}
+                width={["290px", "350px", "450px"]}
                 color="white"
                 fontSize="lg"
                 p={3}
@@ -130,7 +123,7 @@ export default function QusAns() {
             <h2>
               <AccordionButton
                 bg="black"
-                width={["350px", "450px"]}
+                width={["290px", "350px", "450px"]}
                 border={"1px solid rgba(237, 1, 55, 1) "}
                 color="white"
                 p={3}
@@ -171,7 +164,7 @@ export default function QusAns() {
             <h2>
               <AccordionButton
                 bg="black"
-                width={["350px", "450px"]}
+                width={["290px", "350px", "450px"]}
                 border={"1px solid rgba(237, 1, 55, 1) "}
                 color="white"
                 p={3}
@@ -211,7 +204,7 @@ export default function QusAns() {
             <h2>
               <AccordionButton
                 bg="black"
-                width={["350px", "450px"]}
+                width={["290px", "350px", "450px"]}
                 border={"1px solid rgba(237, 1, 55, 1) "}
                 color="white"
                 p={3}
